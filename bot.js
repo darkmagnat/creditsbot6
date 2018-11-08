@@ -19,7 +19,7 @@ client.on('guildMemberAdd', Sal => {
     .setDescription('- Welcome To Universe Town - !  ')
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('general', Here.') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =Sal.guild.channels.find('general', Here.')
     if (!channel) return;
     channel.send({embed : embed});
     });
