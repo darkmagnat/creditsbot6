@@ -13,4 +13,15 @@ var channel = "508667278137753600";//ايدي الروم
     },305);
 })
 
+client.on('guildMemberAdd', Sal => {
+    var embed = new Discord.RichEmbed()
+    .setTitle('Welcome')
+    .setDescription('- Welcome To Universe Town - !  ')
+    .setColor('RANDOM')
+    .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
+    var channel =Sal.guild.channels.find('general', Here.') // هنا حط اسم الروم الي تبيه يكتب فيه
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
+
 client.login(process.env.BOT_TOKEN);
