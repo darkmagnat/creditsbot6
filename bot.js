@@ -9,7 +9,7 @@ client.on('ready', async() => {
 var server = "508240875072126997"; // ايدي السررفر
 var channel = "508667278137753600";//ايدي الروم
     setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , cazanova spam , ')
+    client.guilds.get(server).channels.get(channel).send('Universe Town  , Universe Town , Universe Town , Universe Town , Universe Town , Universe Town , Universe Town , Universe Town , Universe Town , Universe Town ')
     },305);
 })
 
