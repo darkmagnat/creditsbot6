@@ -13,19 +13,20 @@ var channel = "508667278137753600";//ايدي الروم
     },305);
 })
 
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
 
-client.on('message', m => {
-    var prefix = "-"
-    if (m.content.startsWith(prefix + 'say')) {
-        var args = m.content.split(" ");
-        var str = ``
-        if (!args[1]) {
-            str+=`You Have To Type Something ..`
-        } else {
-            str+=args.join(" ").slice(args[1].length);
-        };
-        m.channel.send(str);
-    };
-});
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "say") {
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|`ADMINISTRATOR`ليس لديك صلاحيات`');
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
 
 client.login(process.env.BOT_TOKEN);
