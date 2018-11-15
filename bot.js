@@ -31,10 +31,8 @@ client.on('message', message => {
         if(message.content.startsWith(prefix + 'ألامر')) {
             message.channel.send(''+x);
                 message.delete(999)
-        }
-        
-       
-      });
+        } 
+      })
 
 
 client.login(process.env.BOT_TOKEN);
